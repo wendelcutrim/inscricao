@@ -6,34 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição</title>
     <style>
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
         main {
             background-color: #F0F0F0;
             width: 400px;
             min-height: 300px;
             margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            color: #666;
         }
+
+        label {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        input, select {
+            border: 1px solid #E0E0E0;
+            padding: 3px;
+            display: block;
+            width: 100%;
+        }
+
+        fieldset {
+            border: 1px solid #999;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
     </style>
 </head>
 <body>
     <main>
         <!-- o nome -->
-    
+        <label>
+            Nome:
+            <input type="text" name="name" placeholder="Digite o seu nome"> 
+        </label>
         <!-- senha -->
-        
+
+        <label>
+            Senha:
+            <input type="password" name="password" id="password" placeholder="Digite a sua senha">
+        </label>
         <!-- confirmação de senha -->
-    
+
+        <label>
+            Confirmação de Senha:
+            <input type="password" id="checkPassword" id="" placeholder="Confirma a sua senha">
+        </label>
+
         <!-- data de nascimento -->
-    
+        <label for="data-nascimento">Data de nascimento:</label>
+        <input type="date" name="dataNascimento" id="data-nascimento">
+
         <!-- estado -->
-    
+        <label>
+            Estado:
+            <select name="estado">
+                <option disabled selected>Escolha um stado</option>
+                <optgroup label="Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amapá</option>
+                </optgroup>
+                <optgroup label="Sul">
+                <option value="SC">Santa Catarina</option>
+                    <option value="PR">Paraná</option>
+                </optgroup>
+            </select>
+        </label>
         <!-- cidade -->
     
+        <!--Númeri de filhos-->
+        <label>
+            Número de Filhos:
+            <input type="number" name="numeroFilhos" id="" value="0" min="0" max="20">
+        </label>
+
         <!-- Meio de contato preferido: Telefone, whatsapp, SMS ou email -->
-    
+        <fieldset>
+            <legend>Meios de Contato</legend>
+            <label><input type="radio" name="meioDeContato" id="">WhatsApp</label>
+            <label><input type="radio" name="meioDeContato" id="">Telefone</label>
+            <label><input type="radio" name="meioDeContato" id="">SMS</label>
+            <label><input type="radio" name="meioDeContato" id="">E-mail</label>
+        </fieldset>
         <!-- Disponibilidade: Manhã, tarde, noite -->
         
         <!-- Upload de imagem -->
     </main>
-    
 </body>
 </html>
